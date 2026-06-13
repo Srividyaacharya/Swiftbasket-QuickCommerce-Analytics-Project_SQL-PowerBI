@@ -1,0 +1,41 @@
+product_id,product_name,category,base_price,sub_category,is_perishable,reorder_point_units
+P001,Milk 1L,Dairy,62,Milk and Curd,1,15
+P002,Bread Loaf,Bakery,40,Bread and Buns,1,8
+P003,Bananas 1kg,Produce,55,Fresh Vegetables,1,12
+P004,Eggs 12 pack,Protein,78,Meat and Eggs,1,10
+P005,Tomatoes 1kg,Produce,38,Fresh Vegetables,1,
+P006,Soft Drink 2L,Beverages,95,Cold Drinks,0,20
+P007,Rice 1kg,Staples,72,Rice and Flour,0,25
+P008,Wheat Flour 1kg,Staples,58,Rice and Flour,0,25
+P009,Cooking Oil 1L,Staples,145,Rice and Flour,0,25
+P010,Sugar 1kg,Staples,49,Rice and Flour,0,25
+P011,Salt 1kg,Staples,22,Rice and Flour,0,25
+P012,Tea Powder 250g,Beverages,130,Cold Drinks,0,20
+P013,Coffee Powder 200g,Beverages,180,Cold Drinks,0,
+P014,Biscuits Pack,Snacks,30,Packaged Snacks,0,18
+P015,Chips Pack,Snacks,25,Packaged Snacks,0,18
+P016,Apple 1kg,Produce,120,Fresh Vegetables,1,
+P017,Onion 1kg,Produce,45,Fresh Vegetables,1,
+P018,Potatoes 1kg,Produce,42,Fresh Vegetables,1,12
+P019,Chicken 1kg,Protein,260,Meat and Eggs,1,10
+P020,Paneer 200g,Protein,95,Meat and Eggs,1,
+P021,Curd 500g,Dairy,48,Milk and Curd,1,15
+P022,Butter 100g,Dairy,55,Milk and Curd,1,15
+P023,Cheese Slices,Dairy,110,Milk and Curd,1,15
+P024,Ice Cream 500ml,Frozen,190,Frozen Foods,0,14
+P025,Juice 1L,Beverages,85,Cold Drinks,0,20
+P026,Instant Noodles,Snacks,14,Packaged Snacks,0,18
+P027,Breakfast Cereal,Breakfast,210,Cereals and Oats,0,
+P028,Oats 500g,Breakfast,80,Cereals and Oats,0,
+P029,Peanut Butter,Spreads,165,Jams and Honey,0,12
+P030,Jam Bottle,Spreads,95,Jams and Honey,0,12
+P031,Toothpaste,Personal Care,85,Skincare,0,10
+P032,Soap Bar,Personal Care,35,Skincare,0,10
+P033,Shampoo 200ml,Personal Care,165,Skincare,0,10
+P034,Detergent 1kg,Home Care,210,Cleaning,0,10
+P035,Dishwash Liquid,Home Care,120,Cleaning,0,10
+P036,Tissue Paper,Home Care,40,Cleaning,0,10
+P037,Paper Towels,Home Care,110,Cleaning,0,10
+P038,Mineral Water 1L,Beverages,25,Cold Drinks,0,
+P039,Energy Drink,Beverages,125,Cold Drinks,0,20
+P040,Frozen Peas 500g,Frozen,140,Frozen Foods,0,14

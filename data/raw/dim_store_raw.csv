@@ -1,0 +1,41 @@
+store_id,store_name,city,locality,zone,tier,tier_label,latitude,longitude,store_open_date
+S001,SwiftBasket Indiranagar Zone A,Bengaluru,Indiranagar,Zone A,1,Star,12.9719,77.6412,2025-06-01 00:00:00
+S002,SwiftBasket Koramangala Zone A,Bengaluru,Koramangala,Zone A,1,Star,12.9352,77.6245,2025-06-01 00:00:00
+S003,SwiftBasket Whitefield Zone A,Bengaluru,Whitefield,Zone A,2,Good,12.9698,77.7499,2025-06-01 00:00:00
+S004,SwiftBasket HSR Layout Zone A,Bengaluru,HSR Layout,Zone A,1,Star,12.9116,77.6474,2025-06-01 00:00:00
+S005,SwiftBasket BTM Layout Zone A,Bengaluru,BTM Layout,Zone A,2,Good,12.9166,77.6101,2025-06-01 00:00:00
+S006,SwiftBasket Jayanagar Zone A,Bengaluru,Jayanagar,Zone A,2,Good,12.925,77.5938,2025-06-01 00:00:00
+S007,SwiftBasket Marathahalli Zone A,Bengaluru,Marathahalli,Zone A,2,Good,12.9591,77.6974,2025-06-01 00:00:00
+S008,SwiftBasket Bellandur Zone A,Bengaluru,Bellandur,Zone A,3,Average,12.9255,77.6765,2025-06-01 00:00:00
+S009,SwiftBasket Electronic City Zone A,Bengaluru,Electronic City,Zone A,3,Average,12.8456,77.6603,2025-06-01 00:00:00
+S010,SwiftBasket Yelahanka Zone A,Bengaluru,Yelahanka,Zone A,4,Struggling,13.1007,77.5963,2025-06-01 00:00:00
+S011,SwiftBasket Indiranagar Zone B,Bengaluru,Indiranagar,Zone B,2,Good,12.9759,77.6382,2025-07-16 00:00:00
+S012,SwiftBasket Koramangala Zone B,Bengaluru,Koramangala,Zone B,2,Good,12.9392,77.6215,2025-07-16 00:00:00
+S013,SwiftBasket Whitefield Zone B,Bengaluru,Whitefield,Zone B,3,Average,12.9738,77.7469,2025-07-16 00:00:00
+S014,SwiftBasket HSR Layout Zone B,Bengaluru,HSR Layout,Zone B,2,Good,12.9156,77.6444,2025-07-16 00:00:00
+S015,SwiftBasket BTM Layout Zone B,Bengaluru,BTM Layout,Zone B,3,Average,12.9206,77.6071,2025-07-16 00:00:00
+S016,SwiftBasket Jayanagar Zone B,Bengaluru,Jayanagar,Zone B,3,Average,12.929,77.5908,2025-07-16 00:00:00
+S017,SwiftBasket Marathahalli Zone B,Bengaluru,Marathahalli,Zone B,3,Average,12.9631,77.6944,2025-07-16 00:00:00
+S018,SwiftBasket Bellandur Zone B,Bengaluru,Bellandur,Zone B,4,Struggling,12.9295,77.6735,2025-07-16 00:00:00
+S019,SwiftBasket Electronic City Zone B,Bengaluru,Electronic City,Zone B,4,Struggling,12.8496,77.6573,2025-07-16 00:00:00
+S020,SwiftBasket Yelahanka Zone B,Bengaluru,Yelahanka,Zone B,4,Struggling,13.1047,77.5933,2025-07-16 00:00:00
+S021,SwiftBasket Indiranagar Zone C,Bengaluru,Indiranagar,Zone C,2,Good,12.9689,77.6462,2025-08-30 00:00:00
+S022,SwiftBasket Koramangala Zone C,Bengaluru,Koramangala,Zone C,2,Good,12.9322,77.6295,2025-08-30 00:00:00
+S023,SwiftBasket Whitefield Zone C,Bengaluru,Whitefield,Zone C,3,Average,12.9668,77.7549,2025-08-30 00:00:00
+S024,SwiftBasket HSR Layout Zone C,Bengaluru,HSR Layout,Zone C,2,Good,12.9086,77.6524,2025-08-30 00:00:00
+S025,SwiftBasket BTM Layout Zone C,Bengaluru,BTM Layout,Zone C,3,Average,12.9136,77.6151,2025-08-30 00:00:00
+S026,SwiftBasket Jayanagar Zone C,Bengaluru,Jayanagar,Zone C,3,Average,12.922,77.5988,2025-08-30 00:00:00
+S027,SwiftBasket Marathahalli Zone C,Bengaluru,Marathahalli,Zone C,3,Average,12.9561,77.7024,2025-08-30 00:00:00
+S028,SwiftBasket Bellandur Zone C,Bengaluru,Bellandur,Zone C,4,Struggling,12.9225,77.6815,2025-08-30 00:00:00
+S029,SwiftBasket Electronic City Zone C,Bengaluru,Electronic City,Zone C,4,Struggling,12.8426,77.6653,2025-08-30 00:00:00
+S030,SwiftBasket Yelahanka Zone C,Bengaluru,Yelahanka,Zone C,4,Struggling,13.0977,77.6013,2025-08-30 00:00:00
+S031,SwiftBasket Indiranagar Zone D,Bengaluru,Indiranagar,Zone D,3,Average,12.9779,77.6452,2025-10-14 00:00:00
+S032,SwiftBasket Koramangala Zone D,Bengaluru,Koramangala,Zone D,3,Average,12.9412,77.6285,2025-10-14 00:00:00
+S033,SwiftBasket Whitefield Zone D,Bengaluru,Whitefield,Zone D,4,Struggling,12.9758,77.7539,2025-10-14 00:00:00
+S034,SwiftBasket HSR Layout Zone D,Bengaluru,HSR Layout,Zone D,3,Average,12.9176,77.6514,2025-10-14 00:00:00
+S035,SwiftBasket BTM Layout Zone D,Bengaluru,BTM Layout,Zone D,4,Struggling,12.9226,77.6141,2025-10-14 00:00:00
+S036,SwiftBasket Jayanagar Zone D,Bengaluru,Jayanagar,Zone D,4,Struggling,12.931,77.5978,2025-10-14 00:00:00
+S037,SwiftBasket Marathahalli Zone D,Bengaluru,Marathahalli,Zone D,4,Struggling,12.9651,77.7014,2025-10-14 00:00:00
+S038,SwiftBasket Bellandur Zone D,Bengaluru,Bellandur,Zone D,4,Struggling,12.9315,77.6805,2025-10-14 00:00:00
+S039,SwiftBasket Electronic City Zone D,Bengaluru,Electronic City,Zone D,4,Struggling,12.8516,77.6643,2025-10-14 00:00:00
+S040,SwiftBasket Yelahanka Zone D,Bengaluru,Yelahanka,Zone D,4,Struggling,13.1067,77.6003,2025-10-14 00:00:00
