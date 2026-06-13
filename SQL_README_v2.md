@@ -242,9 +242,27 @@ This mirrors the **Medallion Architecture** used in industry:
 - Tracked how many stayed active each month after joining
 - Calculated 3-month rolling retention rate per channel
 
-**Finding:** Referral channel retains ~27% better than paid acquisition
+##  Key Insights
 
-**SQL:** CTEs · `ROW_NUMBER()` · `DATEDIFF` · `AVG OVER (ROWS BETWEEN)`
+  <img width="1332" height="642" alt="image" src="https://github.com/user-attachments/assets/7ee2be5b-8a87-45c0-98ea-e1ddc039e796" />
+  
+- Customer retention drops significantly during the first month across all acquisition channels, declining from **100% to 47–68%**, before stabilizing around **49–63%** in subsequent months.
+- **Paid App Install** was the best-performing channel, achieving **67.7% Month-1 retention** and **62.5% Month-3 retention**.
+- **Referral** and **Organic** channels demonstrated strong long-term retention (**60.0%** and **60.7%** Month-3 retention respectively).
+- **Word of Mouth** customers showed strong engagement despite lower acquisition volume.
+- **Influencer** campaigns generated high acquisition volume but experienced a gradual decline in retention over time.
+- **Coupon** acquisitions showed the weakest retention performance, indicating discount-driven purchasing behavior.
+
+---
+
+##  Business Recommendations
+
+- Improve customer engagement during the **first 30 days**, where the highest churn occurs.
+- Increase investment in **Paid App Install, Organic, and Referral** channels.
+- Expand the **Referral Program** to drive scalable customer growth.
+- Evaluate **Influencer campaigns** at the creator level and scale high-performing partnerships.
+- Reassess **Coupon-based acquisition strategies** and focus on loyalty-driven incentives.
+- Continue monitoring newer cohorts before making major budget allocation decisions.
 
 ![Problem 1](screenshots/problem1_retention.png)
 
