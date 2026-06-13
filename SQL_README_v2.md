@@ -277,7 +277,24 @@ This mirrors the **Medallion Architecture** used in industry:
 - Ranked worst 5 per store with `RANK() PARTITION BY store_id`
 - Flagged root cause: Distance+Rain vs Ops Issue
 
-**Finding:** Rainy days increase late deliveries by ~23 percentage points
+## Key Insights
+
+- Delivery delays during rainy conditions were **not caused by distance**, as average delivery distances across all stores ranged from only **1.4–2.7 km**.
+- **100% of riders** experienced SLA breaches on rainy days, indicating a systemic operational issue rather than individual rider performance.
+- **S003 (Whitefield)** showed the poorest performance, with rider **R048 averaging 52.9 minutes** per delivery despite traveling only **2.66 km**.
+- **S002 (Koramangala)** had **6 riders with 100% late-delivery rates**, suggesting a potential store-level bottleneck.
+- Pick-pack times remained consistent at **4–6 minutes** across all stores, indicating that order preparation was not the primary cause of delays.
+- The evidence suggests that rainy-weather operations and last-mile execution, rather than delivery distance or order preparation, are the key drivers of SLA failures.
+
+---
+
+## Business Recommendations
+
+- Implement a **weather-adjusted SLA** to account for unavoidable delays during rainy conditions.
+- Investigate operational inefficiencies in **S003 (Whitefield)**, particularly rider **R048**, to identify root causes.
+- Conduct a process audit at **S002 (Koramangala)** to uncover dispatch, handoff, or rider allocation bottlenecks.
+- Analyze best practices from relatively better-performing riders and standardize successful delivery approaches across stores.
+- Separate **weather-related delays** from standard SLA reporting to improve performance measurement and operational decision-making.
 
 **SQL:** Conditional aggregation · `HAVING` · `RANK() OVER (PARTITION BY)`
 
