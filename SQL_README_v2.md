@@ -225,10 +225,10 @@ This mirrors the **Medallion Architecture** used in industry:
 | 13 | `festival_calendar` | Trailing spaces in `festival_name` | `LTRIM(RTRIM(...))` |
 
 ### Audit Results
-![Audit](screenshots/audit_results.png)
+![Audit](Screenshots/audit_results.png)
 
 ### Schema Structure
-![Schema](screenshots/schema_structure.png)
+![Schema](Screenshots/Schemastructure.png)
 
 ---
 
@@ -264,7 +264,7 @@ This mirrors the **Medallion Architecture** used in industry:
 - Reassess **Coupon-based acquisition strategies** and focus on loyalty-driven incentives.
 - Continue monitoring newer cohorts before making major budget allocation decisions.
 
-![Problem 1](screenshots/problem1_retention.png)
+![Problem 1](Screenshots/problem1_retention.png)
 
 ---
 
