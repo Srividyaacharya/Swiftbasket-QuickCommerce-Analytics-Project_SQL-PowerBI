@@ -424,7 +424,7 @@ GO
 --   Which categories spike the most in the 3-day window before
 --   a festival? 
 -- Concepts: Date range joins, RATIO_TO_REPORT (% of total),
---           LEAD for next festival lookup, string functions
+--          , string functions
 -- ============================================================
 
 -- Step 5a: Tag every order date with its festival context
@@ -501,69 +501,7 @@ festival_spikes AS (
     WHERE ps.period_type = 'Pre-Festival'
 )
 
--- Step 5d: Stock readiness for upcoming festivals
-/* 
-next_festival AS (
-    SELECT TOP 1
-        festival_date,
-        festival_name
-    FROM clean.festival_calendar
-    WHERE festival_date > GETDATE()
-      AND days_from_festival = -3              -- start of pre-festival window
-    ORDER BY festival_date
-),
 
-stock_readiness AS (
-    SELECT
-        ci.store_id,
-        st.locality,
-        ci.product_id,
-        p.product_name,
-        p.category,
-        ci.stock_on_hand,
-        fs.spike_pct,
-
-        -- Expected demand during 3-day pre-festival window
-        CAST(
-            sv.avg_daily_units_sold *
-            (1 + COALESCE(fs.spike_pct, 0) / 100.0) * 3
-        AS INT)                                 AS expected_3day_demand,
-
-        -- Coverage ratio
-        CAST(
-            ci.stock_on_hand * 1.0 /
-            NULLIF(
-                sv.avg_daily_units_sold *
-                (1 + COALESCE(fs.spike_pct, 0) / 100.0) * 3,
-                0
-            )
-        AS DECIMAL(4,1))                        AS stock_coverage_ratio
-
-    FROM clean.fact_inventory ci
-    JOIN clean.dim_store st   ON ci.store_id  = st.store_id
-    JOIN clean.dim_product p  ON ci.product_id = p.product_id
-    JOIN (                           -- latest stock snapshot
-        SELECT store_id, product_id, MAX(inventory_date) AS max_date
-        FROM clean.fact_inventory
-        GROUP BY store_id, product_id
-    ) latest ON ci.store_id = latest.store_id
-             AND ci.product_id = latest.product_id
-             AND ci.inventory_date = latest.max_date
-    LEFT JOIN festival_spikes fs ON p.category = fs.category
-    LEFT JOIN (                      -- reuse velocity from Problem 4
-        SELECT o.store_id, o.product_id,
-               SUM(o.units) * 1.0 / NULLIF(DATEDIFF(DAY,
-                   MIN(CAST(o.order_ts AS DATE)),
-                   MAX(CAST(o.order_ts AS DATE))) + 1, 0) AS avg_daily_units_sold
-        FROM clean.fact_orders o
-        WHERE o.order_status = 'delivered'
-          AND o.order_ts >= DATEADD(DAY, -30,
-              (SELECT MAX(order_ts) FROM clean.fact_orders))
-        GROUP BY o.store_id, o.product_id
-    ) sv ON ci.store_id = sv.store_id AND ci.product_id = sv.product_id
-    CROSS JOIN next_festival nf
-)
-*/
 -- Final Output 5A: Festival spike leaderboard by category
 SELECT
     category,
