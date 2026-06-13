@@ -298,7 +298,7 @@ This mirrors the **Medallion Architecture** used in industry:
 
 **SQL:** Conditional aggregation · `HAVING` · `RANK() OVER (PARTITION BY)`
 
-![Problem 2](screenshots/problem2_delivery.png)
+![Problem 2](Screenshots/problem2_delivery.png)
 
 ---
 
@@ -315,7 +315,7 @@ This mirrors the **Medallion Architecture** used in industry:
 
 **SQL:** Multi-CTE pipeline · `LEFT JOIN` orphan detection · ROI formula
 
-![Problem 3](screenshots/problem3_promo.png)
+![Problem 3](Screenshots/problem3_promo.png)
 
 ---
 
@@ -332,7 +332,7 @@ This mirrors the **Medallion Architecture** used in industry:
 
 **SQL:** Velocity calc · `ROW_NUMBER()` latest snapshot · risk tier `CASE WHEN`
 
-![Problem 4](screenshots/problem4_inventory.png)
+![Problem 4](Screenshots/problem4_inventory.png)
 
 ---
 
