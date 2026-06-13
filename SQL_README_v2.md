@@ -228,7 +228,7 @@ This mirrors the **Medallion Architecture** used in industry:
 ![Audit](Screenshots/audit_results.png)
 
 ### Schema Structure
-![Schema](Screenshots/Schemastructure.png)
+![Schema](Screenshots/schema_structure.png)
 
 ---
 
