@@ -311,7 +311,24 @@ This mirrors the **Medallion Architecture** used in industry:
 - Detected orphan orders using `LEFT JOIN` null check
 - Classified: Star Promo / Volume Only / Poor ROI
 
-**Finding:** Dairy promos show highest ROI. Fresh Produce is mostly margin giveaway
+## Key Insights
+
+- Most promotions fell into **"Efficient"** or **"Poor ROI"** categories, indicating that many campaigns either generated limited volume growth or failed to deliver profitable returns.
+- **Star Promos** were rare but highly effective, with products like **Butter 100g, Breakfast Cereal, and Biscuits Pack** achieving both strong ROI and significant volume uplift.
+- Core stores (**S001–S004**) consistently delivered higher promotional ROI, while several peripheral stores (**S018–S040**) experienced low or negative returns.
+- Beverage and staple categories generated high promotional activity but showed limited incremental sales, suggesting potential discount leakage.
+- Protein products such as **Chicken and Eggs** frequently produced low ROI and margin erosion, particularly in lower-volume stores.
+
+---
+
+## Business Recommendations
+
+- Scale high-performing **Star Promos** across similar stores and product categories.
+- Reduce or redesign promotions in stores with consistently low ROI and negative margins.
+- Establish a minimum **ROI threshold (e.g., 2x)** before approving promotional campaigns.
+- Audit "Efficient" promotions to identify discount leakage and optimize pricing strategies.
+- Replace blanket discounts with **bundling and loyalty-based offers**, especially for beverage and staple categories.
+- Limit deep discounting on high-cost protein products in low-volume stores.
 
 **SQL:** Multi-CTE pipeline · `LEFT JOIN` orphan detection · ROI formula
 
@@ -328,7 +345,22 @@ This mirrors the **Medallion Architecture** used in industry:
 - Compared stock vs reorder point per product
 - Generated risk tiers + recommended reorder quantity
 
-**Finding:** 15–20% of SKUs at stockout risk on any given day
+## Key Insights
+
+- Stockout risk is heavily concentrated in **Struggling-tier stores**, with several locations experiencing multiple simultaneous stockouts across essential products.
+- Over **80 products** were classified as **Stockout** or **Critical (≤2 days remaining)**, indicating systemic inventory management issues rather than isolated supply disruptions.
+- Perishable products such as **Milk, Eggs, Butter, Bananas, and Curd** accounted for a significant share of stockouts, increasing the risk of lost sales and customer dissatisfaction.
+- More than **40 store-product combinations** had missing sales history (`avg_daily_units_sold = NULL`), preventing accurate demand forecasting and replenishment planning.
+- Star-performing stores generally maintained healthy inventory levels, though a few high-demand products showed low stock coverage and require proactive monitoring.
+
+---
+## Business Recommendations
+
+- Prioritize emergency replenishment for stores with multiple critical stockouts, focusing first on perishable and high-demand products.
+- Resolve missing sales data issues to improve forecast accuracy and inventory planning.
+- Implement more frequent replenishment cycles for struggling stores, particularly for perishable items.
+- Restrict promotional campaigns on products or stores experiencing active stockouts.
+- Review low-volume SKUs in underperforming stores and consider assortment optimization to reduce inventory carrying costs.
 
 **SQL:** Velocity calc · `ROW_NUMBER()` latest snapshot · risk tier `CASE WHEN`
 
@@ -343,28 +375,43 @@ This mirrors the **Medallion Architecture** used in industry:
 - Tagged each order date with festival context via range join
 - Calculated spike % vs normal daily baseline
 - Ranked categories by spike per festival
+## Key Insights
 
-**Finding:** Milk and Bread spike 35–40% in the 3-day pre-festival window
-
-**SQL:** Range joins · `RANK() PARTITION BY festival_name` · % of total window function
-
-![Problem 5](screenshots/problem5_festival.png)
+- **Republic Day** and **Makar Sankranti** generated the highest demand spikes across categories, outperforming traditionally prioritized events like Christmas and New Year.
+- **Protein** and **Frozen** categories showed the strongest and most consistent festival-driven demand increases, often exceeding **100% above baseline sales**.
+- **Beverages** maintained the highest revenue share across most festivals, making it the most critical category for revenue protection during peak demand periods.
+- **Personal Care** and **Home Care** experienced significant spikes during festivals, reflecting increased household preparation and social gathering activities.
+- **Bakery** emerged as an unexpectedly high-growth category during multiple festivals, indicating underappreciated demand potential.
+- **Spreads** consistently delivered the lowest festival uplift and contributed minimally to incremental demand.
 
 ---
 
-## 💡 SQL Concepts Used
+## Business Recommendations
 
-| Level | Concept | Where |
-|---|---|---|
-| 🟢 Beginner | `SELECT`, `WHERE`, `JOIN`, `GROUP BY` | All |
-| 🟢 Beginner | `CASE WHEN`, `COALESCE`, `NULLIF` | Cleaning + all |
-| 🟡 Intermediate | CTEs — `WITH ... AS` | P1, P3, P4, P5 |
-| 🟡 Intermediate | `HAVING`, conditional aggregation | P2 |
-| 🟡 Intermediate | `TRY_CAST`, `CONVERT`, `SUBSTRING` | Cleaning |
-| 🔴 Advanced | `ROW_NUMBER()`, `RANK()` window functions | P1, P2, P3, P4 |
-| 🔴 Advanced | Rolling avg `AVG OVER (ROWS BETWEEN)` | P1 |
-| 🔴 Advanced | Range joins on date windows | P5 |
-| 🔴 Advanced | Multi-step CTE pipelines | P3, P4, P5 |
+- Build festival-specific inventory plans using historical demand multipliers and maintain additional safety stock for high-spike categories.
+- Prioritize **Protein, Frozen, and Beverages** for pre-festival replenishment to prevent stockouts during peak demand periods.
+- Increase inventory allocation 5–7 days before **Republic Day, Makar Sankranti, Holi, and Ugadi**, which showed the strongest demand surges.
+- Avoid running promotions on categories already experiencing strong organic festival demand to protect margins.
+- Use historical festival demand data to improve supplier planning and secure inventory commitments ahead of peak periods.
+
+**SQL:** Range joins · `RANK() PARTITION BY festival_name` · % of total window function
+
+![Problem 5](Screenshots/problem5_festival.png)
+
+---
+## SQL Skills Demonstrated
+
+- Data Cleaning & Validation
+- Cohort Retention Analysis
+- Window Functions (`ROW_NUMBER`, `RANK`, `AVG OVER`)
+- Rolling Retention Metrics
+- Conditional Aggregation
+- Inventory Risk Analysis
+- Promotion ROI Analysis
+- Delivery SLA Analytics
+- Festival Demand Forecasting
+- Multi-Step CTE Pipelines
+- Business KPI Development
 
 ---
 
@@ -383,10 +430,9 @@ This mirrors the **Medallion Architecture** used in industry:
 
 ## 👤 About
 
-**Name:** Your Name
-**LinkedIn:** linkedin.com/in/yourprofile
-**Email:** your.email@gmail.com
-
+**Name:** Srividya
+**LinkedIn:** www.linkedin.com/in/srividya-achar
+**Email:** SrividyaAchar@outlook.com
 > 🔗 Also see: [SwiftBasket Power BI Dashboard →](../swiftbasket-powerbi-dashboard)
 
 ---
