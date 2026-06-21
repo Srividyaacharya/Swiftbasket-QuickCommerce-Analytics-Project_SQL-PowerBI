@@ -30,6 +30,7 @@ The dashboard includes a branded navigation panel with cross-page slicers:
 | **Order Status** | Delivered · Cancelled |
 
 All slicers filter every visual across every page simultaneously.
+<img width="646" height="1302" alt="image" src="https://github.com/user-attachments/assets/06ee5b6a-d66b-4907-b3ff-bfd4bf2c8201" />
 
 ---
 
@@ -40,6 +41,8 @@ All slicers filter every visual across every page simultaneously.
 ### Page 1 — Overview
 
 > **Business question:** How is the overall business performing?
+<img width="2652" height="1360" alt="image" src="https://github.com/user-attachments/assets/1a0e843d-4286-40f1-bd49-838280ef9e9a" />
+
 
 **Visuals:**
 - 5 KPI cards — Revenue · Gross Profit · Total Orders · Cancellation Rate · Stockout Leakage
@@ -64,6 +67,8 @@ All slicers filter every visual across every page simultaneously.
 ### Page 2 — Store Performance
 
 > **Business question:** Which stores are winning and which are struggling — and why?
+<img width="2650" height="1480" alt="image" src="https://github.com/user-attachments/assets/1036bbab-a55a-40ca-9597-a0eab60f4b2e" />
+
 
 **Visuals:**
 - 4 KPI cards — avg revenue per store by tier
@@ -84,6 +89,7 @@ All slicers filter every visual across every page simultaneously.
 ### Page 3 — Profit & Margin
 
 > **Business question:** Where is margin being made and where is it being eroded?
+<img width="2640" height="1466" alt="image" src="https://github.com/user-attachments/assets/0b804dea-07e7-457a-a22a-20653f05087a" />
 
 **Visuals:**
 - 4 KPI cards — avg revenue per store by tier
@@ -103,6 +109,7 @@ All slicers filter every visual across every page simultaneously.
 ---
 
 ### Page 4 — Inventory
+<img width="2316" height="1302" alt="image" src="https://github.com/user-attachments/assets/6a37acbf-013f-428e-b192-a9d7db8cd4c4" />
 
 > **Business question:** Which products are at risk of stocking out and how much revenue is being lost?
 
@@ -124,6 +131,8 @@ All slicers filter every visual across every page simultaneously.
 ---
 
 ### Page 5 — Customer
+<img width="2314" height="1276" alt="image" src="https://github.com/user-attachments/assets/24510e2b-1c0f-4ca9-8910-9981ddbf8ff2" />
+
 
 > **Business question:** Who are our customers, how were they acquired, and are we retaining them?
 
@@ -148,6 +157,7 @@ All slicers filter every visual across every page simultaneously.
 ### Page 6 — Delivery Ops
 
 > **Business question:** Are we delivering on time, and what is causing delays?
+<img width="2312" height="1302" alt="image" src="https://github.com/user-attachments/assets/e5c62d65-bb56-47e3-b3c7-2fed7f1f4b4b" />
 
 **Visuals:**
 - 4 KPI cards — On-Time Rate · Avg Actual Delivery · Avg Pick & Pack · Avg Distance KM
@@ -170,6 +180,9 @@ All slicers filter every visual across every page simultaneously.
 ### Page 7 — External Factors
 
 > **Business question:** How do festivals, weather, and promotions affect demand and performance?
+<img width="2318" height="1288" alt="image" src="https://github.com/user-attachments/assets/4d0cdded-01a7-4b81-952c-61dbc8423166" />
+
+
 
 **Visuals:**
 - 4 KPI cards — Festival Demand Lift · Rainy Day Order Drop · Star Promo Rate · Struggling Promo Rate
