@@ -14,8 +14,7 @@
 
 The dashboard covers **40 dark stores**, **23,119 orders**, **5,663 customers**, and **₹1.07 Cr revenue** across a 4-month period (Dec 2025 – Mar 2026).
 
-> 🔗 **SQL Project:** [SwiftBasket SQL Analytics →](../swiftbasket-sql-portfolio)
-
+> 🔗 **Dashboard Link:** [Quickcommerce Analytics Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWJiZjc3ZWUtYTBlMS00NTMwLTgxNjktZWI5ZDdkZjZkNzU0IiwidCI6IjU2MGY2MzA2LWZiZjItNGJhYy1hZTllLWQyMTQ4YzU5OTNiNyJ9)
 ---
 
 ## 🗂️ Dashboard Navigation
