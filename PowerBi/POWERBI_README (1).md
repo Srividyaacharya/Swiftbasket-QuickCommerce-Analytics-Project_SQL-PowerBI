@@ -30,7 +30,7 @@ The dashboard includes a branded navigation panel with cross-page slicers:
 | **Order Status** | Delivered · Cancelled |
 
 All slicers filter every visual across every page simultaneously.
-<img width="646" height="1000" alt="image" src="https://github.com/user-attachments/assets/06ee5b6a-d66b-4907-b3ff-bfd4bf2c8201" />
+<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/06ee5b6a-d66b-4907-b3ff-bfd4bf2c8201" />
 
 ---
 
