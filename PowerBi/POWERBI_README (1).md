@@ -31,7 +31,7 @@ The dashboard includes a branded navigation panel with cross-page slicers:
 
 All slicers filter every visual across every page simultaneously.
 
-<img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/06ee5b6a-d66b-4907-b3ff-bfd4bf2c8201" />
+> <img width="300" height="600" alt="image" src="https://github.com/user-attachments/assets/06ee5b6a-d66b-4907-b3ff-bfd4bf2c8201" />
 
 ---
 
