@@ -12,10 +12,7 @@ Raw Messy Data  →  Data Audit  →  Data Cleaning  →  SQL Analysis  →  Pow
 
 The SQL layer handles all data quality work, cleaning, and business problem-solving. The Power BI layer translates those results into a 7-page interactive executive dashboard.
 
->  All 13 data quality issues were identified, documented, and fixed using SQL Server 2022.
-
-> 🔗 **Live Dashboard:** [SwiftBasket Analytics Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWJiZjc3ZWUtYTBlMS00NTMwLTgxNjktZWI5ZDdkZjZkNzU0IiwidCI6IjU2MGY2MzA2LWZiZjItNGJhYy1hZTllLWQyMTQ4YzU5OTNiNyJ9)
-
+All 13 data quality issues were identified, documented, and fixed using SQL Server 2022.
 ---
 
 ## Business Problem
@@ -208,7 +205,7 @@ This mirrors the **Medallion Architecture** used in industry:
 
 ## SQL Analysis
 
-📂 **Files:**
+**Files:**
 - [`sql/01_create_schema.sql`](sql/01_create_schema.sql) — Creates raw + clean schemas and all tables
 - [`sql/02_data_cleaning.sql`](sql/02_data_cleaning.sql) — Audits all issues and loads clean tables
 - [`sql/03_analysis.sql`](sql/03_analysis.sql) — 5 business problem queries
@@ -233,8 +230,9 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 | 12 | `festival_calendar` | Mixed date formats `DD-MM-YYYY` vs `YYYY-MM-DD` | `SUBSTRING + CONVERT` |
 | 13 | `festival_calendar` | Trailing spaces in `festival_name` | `LTRIM(RTRIM(...))` |
 
-![Audit Results](screenshots/audit_results.png)
-![Schema Structure](screenshots/schema_structure.png)
+![Audit Results](Screenshots/audit_results.png)
+
+![Schema Structure](Screenshots/schema_structure.png)
 
 ---
 
@@ -264,7 +262,7 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 
 **SQL Techniques:** Cohort analysis · Monthly retention calculation · Rolling retention rate · Multi-step CTE pipeline
 
-![Problem 1 Output](screenshots/problem1_retention.png)
+![Problem 1 Output](Screenshots/problem1_retention.png)
 
 ---
 
@@ -296,7 +294,7 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 
 **SQL Techniques:** Conditional aggregation · `HAVING` filter · `RANK() OVER (PARTITION BY)` · Weather segmentation
 
-![Problem 2 Output](screenshots/problem2_delivery.png)
+![Problem 2 Output](Screenshots/problem2_delivery.png)
 
 ---
 
@@ -327,7 +325,7 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 
 **SQL Techniques:** Multi-CTE pipeline · `LEFT JOIN` orphan detection · ROI formula · Promotional classification
 
-![Problem 3 Output](screenshots/problem3_promo.png)
+![Problem 3 Output](Screenshots/problem3_promo.png)
 
 ---
 
@@ -358,7 +356,7 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 
 **SQL Techniques:** Sales velocity calculation · `ROW_NUMBER()` latest snapshot · Risk tier `CASE WHEN` · Reorder quantity logic
 
-![Problem 4 Output](screenshots/problem4_inventory.png)
+![Problem 4 Output](Screenshots/problem4_inventory.png)
 
 ---
 
@@ -389,15 +387,15 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 
 **SQL Techniques:** Range join on festival calendar · `RANK() PARTITION BY festival_name` · Percentage-of-total window function · Demand spike calculation
 
-![Problem 5 Output](screenshots/problem5_festival.png)
+![Problem 5 Output](Screenshots/problem5_festival.png)
 
 ---
 
 ## Power BI Dashboard
 
-📂 **File:** [`powerbi/SwiftBasket_Dashboard.pbix`](powerbi/SwiftBasket_Dashboard.pbix)
+**File:** [`PowerBi/SwiftBasket_Dashboard.pbix`](powerbi/SwiftBasket_Dashboard.pbix)
 
-🔗 **Live Link:** [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWJiZjc3ZWUtYTBlMS00NTMwLTgxNjktZWI5ZDdkZjZkNzU0IiwidCI6IjU2MGY2MzA2LWZiZjItNGJhYy1hZTllLWQyMTQ4YzU5OTNiNyJ9)
+**Live Link:** [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWJiZjc3ZWUtYTBlMS00NTMwLTgxNjktZWI5ZDdkZjZkNzU0IiwidCI6IjU2MGY2MzA2LWZiZjItNGJhYy1hZTllLWQyMTQ4YzU5OTNiNyJ9)
 
 The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages with a branded navigation panel and cross-page slicers.
 
