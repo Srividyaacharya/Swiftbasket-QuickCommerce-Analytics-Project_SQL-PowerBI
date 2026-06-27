@@ -1,5 +1,7 @@
 # SwiftBasket Quick Commerce — End-to-End Analytics Project
 
+---
+
 ## Project Overview
 
 **SwiftBasket** is a simulated Bengaluru-based hyperlocal grocery delivery business modelled after real-world players like Blinkit, Zepto, and Swiggy Instamart. The project covers **40 dark stores**, **23,119 orders**, **5,663 customers**, and **1.07 Cr revenue** across a 4-month period (Dec 2025 - Mar 2026).
@@ -12,7 +14,7 @@ Raw Messy Data  ->  Data Audit  ->  Data Cleaning  ->  SQL Analysis  ->  Power B
 
 The SQL layer handles all data quality work, cleaning, and business problem-solving. The Power BI layer translates those results into a 7-page interactive executive dashboard.
 
-> The raw data was intentionally made messy to simulate real-world data engineering scenarios. All 13 data quality issues were identified, documented, and fixed using SQL Server 2022.
+> All 13 data quality issues were identified, documented, and fixed using SQL Server 2022.
 
 > **Live Dashboard:** [SwiftBasket Analytics Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWJiZjc3ZWUtYTBlMS00NTMwLTgxNjktZWI5ZDdkZjZkNzU0IiwidCI6IjU2MGY2MzA2LWZiZjItNGJhYy1hZTllLWQyMTQ4YzU5OTNiNyJ9)
 
@@ -747,11 +749,6 @@ swiftbasket-analytics/
 
 ## Author
 
-**Srividya Achar** - Transitioning into data analytics from 8 years in IT operations at TCS and Wipro.
-
+**Srividya Achar**
 Email: SrividyaAchar@outlook.com
-
-[LinkedIn](https://linkedin.com/in/srividya-achar) · [Credit Risk Analysis Project](../credit-risk-analysis)
-
----
-*SQL Server 2022 · SSMS 22 · Power BI · DAX · Quick Commerce Analytics · Bengaluru*
+[LinkedIn](https://linkedin.com/in/srividya-achar)
