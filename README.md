@@ -637,55 +637,8 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 **Messy Raw Data**
 The raw data contained 13 deliberate data quality issues across 6 tables - mixed case values, impossible timestamps, negative numeric values, duplicate rows, mixed date formats, and NULL values with no clear fill strategy. Each issue required a different SQL fix and was documented before being resolved to preserve a clean audit trail.
 
-**Dual Schema Architecture**
-Maintaining a `raw.*` and `clean.*` schema separation required careful planning to ensure analysis queries always ran on clean data while the original raw data remained untouched for audit purposes.
-
-**Weather Impact on SLA**
-The on-time delivery analysis required splitting every metric by `is_rainy` flag to separate weather-driven failures from genuine operational failures - otherwise the 95-point drop in on-time rate during rain would have buried all other performance signals.
-
-**Festival Range Join**
-Joining order dates to the festival calendar required a range join (matching order dates within a 3-day window of each festival) rather than a direct date match - a non-trivial SQL pattern that needed careful handling to avoid row multiplication.
-
 ---
 
-## Future Enhancements
-
-- **Predictive Stockout Alerts** - Build a stockout prediction model using 30-day sales velocity and current stock levels, triggering automated reorder recommendations before the Critical threshold is reached
-- **Rider Performance Scoring** - Develop a composite rider score combining on-time rate (dry days), on-time rate (rainy days), average delivery time, and distance efficiency
-- **Real-Time Dashboard** - Connect Power BI to a live SQL database via DirectQuery to enable real-time monitoring of stockouts, cancellations, and SLA breaches
-- **Cohort Expansion** - Extend cohort analysis beyond 3 months and include revenue per customer by cohort - identifying which channels retain high-value customers, not just any customers
-- **Festival Pre-Positioning Model** - Build a demand multiplier model per festival x category x zone to generate specific pre-festival stock recommendations automatically for each store
-
----
-
-## How to Run This Project
-
-**Prerequisites:** SQL Server 2022 · SSMS 22 · Power BI Desktop ([download free](https://powerbi.microsoft.com))
-
-### Step 1 - Clone the Repository
-```bash
-git clone https://github.com/yourusername/swiftbasket-analytics.git
-cd swiftbasket-analytics
-```
-
-### Step 2 - Run the SQL Scripts (in order)
-```
-1. Run sql/01_create_schema.sql    ->  creates database, raw.* and clean.* schemas, all tables
-2. Load CSVs via BULK INSERT       ->  populates raw.* tables from data/raw/ folder
-3. Run sql/02_data_cleaning.sql    ->  Section A (audit all 13 issues), Section B (fix and load clean.*)
-4. Run sql/03_analysis.sql         ->  run one problem at a time, top to bottom
-```
-
-> Always run scripts in this order. Analysis queries depend on the clean schema being populated first.
-
-### Step 3 - Open the Power BI Dashboard
-1. Open Power BI Desktop
-2. Open `PowerBI/SwiftBasket_Dashboard.pbix`
-3. If prompted to refresh data, reconnect to your local SQL Server instance pointing to the `clean.*` schema
-4. Use the navigation buttons at the top to move between pages
-5. Use the filter panel (top-left grid icon) to filter by Tier, Channel, Zone, or Order Status
-
----
 
 ## Project Structure
 
@@ -709,7 +662,7 @@ swiftbasket-analytics/
 |   +-- 03_analysis.sql                  <- 5 business problem queries
 |
 +-- PowerBI/
-|   +-- SwiftBasket_Dashboard.pbix       <- 7-page interactive dashboard
+|   +-- QuickCommerce_Analytics.pbix       <- 7-page interactive dashboard
 |
 +-- Screenshots/
 |   +-- audit_results.png                <- SQL audit output
