@@ -12,7 +12,9 @@ Raw Messy Data  →  Data Audit  →  Data Cleaning  →  SQL Analysis  →  Pow
 
 The SQL layer handles all data quality work, cleaning, and business problem-solving. The Power BI layer translates those results into a 7-page interactive executive dashboard.
 
-All 13 data quality issues were identified, documented, and fixed using SQL Server 2022.
+All 13 data quality issues were identified, documented, and fixed using SQL Server 2022
+
+```
 ---
 
 ## Business Problem
@@ -397,8 +399,6 @@ All 13 issues were identified in Section A of `02_data_cleaning.sql` and fixed i
 
 **Live Link:** [View Dashboard](https://app.powerbi.com/view?r=eyJrIjoiMWJiZjc3ZWUtYTBlMS00NTMwLTgxNjktZWI5ZDdkZjZkNzU0IiwidCI6IjU2MGY2MzA2LWZiZjItNGJhYy1hZTllLWQyMTQ4YzU5OTNiNyJ9)
 
-The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages with a branded navigation panel and cross-page slicers.
-
 ### Interactive Filters (applied across all 7 pages)
 
 | Filter | Options |
@@ -423,6 +423,8 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Orders by day of week — bar chart
 - Order status funnel
 
+![Page 1 - Overview](Screenshots/PBI_page1_overview.png)
+
 **Key Insights:**
 - ₹1.07 Cr revenue with a -13.1% decline vs prior period — the business is shrinking, not growing
 - Good tier generates 39.45% of revenue despite not being the top tier — the backbone of the business
@@ -433,7 +435,7 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - ₹17.3L stockout leakage at 4.8% stockout rate — nearly ₹1 in every ₹20 of potential revenue lost to unavailability
 - Struggling stores: 13% cancellation rate vs overall 5.5% — more than double the average
 
-![Page 1 - Overview](images/page1_overview.png)
+
 
 ---
 
@@ -447,6 +449,8 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Order fulfilment rate by tier
 - Store scorecard table — all 40 stores with revenue, margin, fulfilment rate, stockout rate
 
+![Page 2 - Store Performance](Screenshots/PBI_page2_store_performance.png)
+
 **Key Insights:**
 - Star stores avg ₹8.3L vs Struggling ₹66.8K — a 12.5x revenue gap
 - Top 3 stores are all Zone A locations (Koramangala, HSR Layout, Indiranagar) — but the gap is not purely geographic; Good tier stores in the same areas perform significantly lower
@@ -454,7 +458,7 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Average tier stores cluster around ₹1.8L–₹2.9L with consistent 33–34% gross margins — stable but not growing. Small operational improvements could move several into the Good tier
 - Struggling stores show stockout rates of 10–12% — nearly three times the Star store rate of ~0.3%
 
-![Page 2 - Store Performance](images/page2_store_performance.png)
+
 
 ---
 
@@ -468,6 +472,8 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Gross Margin % by category — horizontal bar
 - Gross Margin % trend over time by tier — line chart
 
+![Page 3 - Profit & Margin](Screenshots/PBI_page3_margin.png)
+
 **Key Insights:**
 - Star tier achieves 43.9% gross margin vs Struggling at 27.4% — a 16.5 percentage point gap on the same products and pricing
 - Good tier generates the highest absolute gross profit (₹1.6M) despite Star having better per-store margins — because Good has more stores and more volume
@@ -475,7 +481,6 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Struggling tier margin is actively declining — from 29% in Dec 2025 to 25% by Mar 2026. These stores will become loss-making if unchecked
 - Star and Good tier margins are flat over 4 months — the decline is isolated to Struggling stores, not a business-wide pricing issue
 
-![Page 3 - Profit & Margin](images/page3_margin.png)
 
 ---
 
@@ -488,13 +493,15 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Inventory Risk table — store × product level with Risk Tier colour coding
 - Lost Revenue by product — horizontal bar
 
+![Page 4 - Inventory](Screenshots/PBI_page4_inventory.png)
+
 **Key Insights:**
 - Chicken 1kg is the single highest lost-revenue product at ₹163K — requires daily replenishment
 - Over 80 store-product combinations classified as Stockout or Critical
 - Perishable items (Milk, Eggs, Butter, Bananas, Curd) account for the majority of stockout events
 - Struggling stores are responsible for the bulk of stockout leakage — inventory failure, not demand failure
 
-![Page 4 - Inventory](images/page4_inventory.png)
+
 
 ---
 
@@ -507,14 +514,14 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Revenue share by acquisition channel
 - Customer distribution by age group
 
+![Page 5 - Customer & Retention](Screenshots/PBI_page5_customer.png)
+
 **Key Insights:**
 - All channels lose 40–60% of customers by month 3 — the first 30 days is the critical retention window
 - Paid App Install has the best month-1 retention at 60% — app users have higher intent and engagement from the start
 - Influencer channel has the worst month-3 retention at 36% — attracted by campaign, not product
 - Organic + Referral = 52% of revenue — the business is not dependent on paid marketing
 - 25–34 age group = 42% of customers — all strategy should be optimised for this cohort first
-
-![Page 5 - Customer & Retention](images/page5_customer.png)
 
 ---
 
@@ -529,6 +536,8 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - On-Time Delivery Rate: Normal vs Rainy Days — clustered bar
 - Avg Delivery Time: Normal vs Rainy Days — clustered bar
 
+![Page 6 - Delivery Ops](Screenshots/PBI_page6_delivery.png)
+
 **Key Insights:**
 - Overall on-time rate of 34.5% against an industry benchmark of 85%+ — less than half the standard
 - Struggling stores promise 50 minutes but deliver in 68 minutes on average — an 18-minute gap. Star stores promise 30 minutes and deliver in 33 — a 3-minute gap
@@ -537,7 +546,6 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Average delivery distance is only 2.85km — distance is not the cause. Rain causes pick-pack handoff delays and rider slowdowns
 - Rain adds 27–39 minutes to delivery time across all tiers — a weather-adjusted SLA would immediately improve the metric without changing actual speed
 
-![Page 6 - Delivery Ops](images/page6_delivery.png)
 
 ---
 
@@ -551,6 +559,8 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Festival lift by category — horizontal bar
 - Promo rate vs discount depth — scatter plot
 
+![Page 7 - External Factors](Screenshots/PBI_page7_external.png)
+
 **Key Insights:**
 - Festival demand is +78% above normal days on average — predictable and plannable, yet inventory shows stockouts during these same periods
 - Republic Day is the most intense demand event — Protein +137%, Dairy +133%, Personal Care +129%
@@ -558,8 +568,6 @@ The dashboard is built directly on the `clean.*` SQL schema and spans 7 pages wi
 - Ugadi and Makar Sankranti spike hardest overall — need to build inventory 5–7 days in advance
 - Rainy days cause a -23.3% drop in orders AND delivery is 127.8% longer — demand and supply both degrade simultaneously
 - Struggling stores run a 24.2% promo rate with 35% average discount vs Star at 6.9% with 10% discount — more promos and deeper discounts do not translate to better results when ops are broken
-
-![Page 7 - External Factors](images/page7_external.png)
 
 ---
 
